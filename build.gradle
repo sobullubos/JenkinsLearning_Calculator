@@ -11,7 +11,11 @@ description = 'Demo project for Spring Boot'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(25)
+		// java 25 works locally, as installed
+		// languageVersion = JavaLanguageVersion.of(25)
+
+		// java 25 works on jenkins (in docker container), as installed there
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
